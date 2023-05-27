@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/catzen": {
+      "name": "/catzen",
+      "lambdaFunction": "BrianHuangCNE430FinalProjectLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

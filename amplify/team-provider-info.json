@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-brianhcne430final-dev-205548-authRole",
+      "UnauthRoleArn": "arn:aws:iam::075763689953:role/amplify-brianhcne430final-dev-205548-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::075763689953:role/amplify-brianhcne430final-dev-205548-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-brianhcne430final-dev-205548-deployment",
+      "UnauthRoleName": "amplify-brianhcne430final-dev-205548-unauthRole",
+      "StackName": "amplify-brianhcne430final-dev-205548",
+      "StackId": "arn:aws:cloudformation:us-west-2:075763689953:stack/amplify-brianhcne430final-dev-205548/7b4e17f0-fc42-11ed-8a17-0a861c00485d",
+      "AmplifyAppId": "d6zgg0js02l4g"
+    },
+    "categories": {
+      "function": {
+        "BrianHuangCNE430FinalProjectLambda": {
+          "deploymentBucketName": "amplify-brianhcne430final-dev-205548-deployment",
+          "s3Key": "amplify-builds/BrianHuangCNE430FinalProjectLambda-73664e62377170787a4e-build.zip"
+        }
+      },
+      "api": {
+        "BrianHuangCNE430FinalProjectAPI": {}
+      }
+    }
+  }
+}

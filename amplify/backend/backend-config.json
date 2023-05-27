@@ -1,0 +1,43 @@
+{
+  "api": {
+    "BrianHuangCNE430FinalProjectAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "BrianHuangCNE430FinalProjectLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "BrianHuangCNE430FinalProjectLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_BrianHuangCNE430FinalProjectLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "BrianHuangCNE430FinalProjectLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_BrianHuangCNE430FinalProjectLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "BrianHuangCNE430FinalProjectLambda"
+        }
+      ]
+    }
+  }
+}
