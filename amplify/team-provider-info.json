@@ -15,7 +15,7 @@
       "function": {
         "BrianHuangCNE430FinalProjectLambda": {
           "deploymentBucketName": "amplify-brianhcne430final-dev-205548-deployment",
-          "s3Key": "amplify-builds/BrianHuangCNE430FinalProjectLambda-73664e62377170787a4e-build.zip"
+          "s3Key": "amplify-builds/BrianHuangCNE430FinalProjectLambda-4668744f744477573679-build.zip"
         }
       },
       "api": {

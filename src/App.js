@@ -1,24 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const generate = async () => {
+    const response = await fetch(
+      "https://y59hg4uhzc.execute-api.us-west-2.amazonaws.com/dev/catzen"
+    );
+    const result = await response.json();
+    console.log(result);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <img src="https://cdn2.thecatapi.com/images/bkq.jpg"></img>
+        <blockquote>Quote here</blockquote>
+      </div>
+      <button onClick={generate}>Generate</button>
+    </>
   );
 }
 

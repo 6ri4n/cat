@@ -22,61 +22,45 @@ app.use(function (req, res, next) {
   next();
 });
 
-/**********************
- * Example get method *
- **********************/
+app.get("/catzen", async function (req, res) {
+  // random cat images - https://api.thecatapi.com/v1/images/search
+  // random cat fact - https://catfact.ninja/fact
 
-app.get("/catzen", function (req, res) {
-  // Add your code here
-  res.json({ success: "get call succeed!", url: req.url });
+  const catImage = await getRandomCatImage();
+  const catFact = await getRandomCatFact();
+
+  if (catImage && catFact) {
+    res.status(200).json({ catImage, catFact });
+  } else {
+    res.status(500).json({ message: "Couldn't retrieve cat image or fact" });
+  }
+
+  function getRandomCatImage() {
+    return fetch("https://api.thecatapi.com/v1/images/search")
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        return res[0].url;
+      })
+      .catch((err) => {
+        return 0;
+      });
+  }
+
+  function getRandomCatFact() {
+    return fetch("https://catfact.ninja/fact")
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        return res.fact;
+      })
+      .catch((err) => {
+        return 0;
+      });
+  }
 });
-
-// app.get('/catzen/*', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'get call succeed!', url: req.url});
-// });
-
-/****************************
- * Example post method *
- ****************************/
-
-// app.post('/catzen', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'post call succeed!', url: req.url, body: req.body})
-// });
-
-// app.post('/catzen/*', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'post call succeed!', url: req.url, body: req.body})
-// });
-
-/****************************
- * Example put method *
- ****************************/
-
-// app.put('/catzen', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'put call succeed!', url: req.url, body: req.body})
-// });
-
-// app.put('/catzen/*', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'put call succeed!', url: req.url, body: req.body})
-// });
-
-/****************************
- * Example delete method *
- ****************************/
-
-// app.delete('/catzen', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'delete call succeed!', url: req.url});
-// });
-
-// app.delete('/catzen/*', function(req, res) {
-//   // Add your code here
-//   res.json({success: 'delete call succeed!', url: req.url});
-// });
 
 app.listen(3000, function () {
   console.log("App started");
