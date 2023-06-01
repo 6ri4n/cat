@@ -26,14 +26,13 @@ app.get("/catzen", async function (req, res) {
   // random cat images - https://api.thecatapi.com/v1/images/search
   // random cat fact - https://catfact.ninja/fact
 
-  const catImage = await getRandomCatImage();
+  let catImage = await getRandomCatImage();
+  while (catImage.includes("gif")) catImage = await getRandomCatImage();
   const catFact = await getRandomCatFact();
 
-  if (catImage && catFact) {
-    res.status(200).json({ catImage, catFact });
-  } else {
-    res.status(500).json({ message: "Couldn't retrieve cat image or fact" });
-  }
+  catImage && catFact
+    ? res.status(200).json({ catImage, catFact })
+    : res.status(500).json({ message: "Couldn't retrieve cat image or fact" });
 
   function getRandomCatImage() {
     return fetch("https://api.thecatapi.com/v1/images/search")
