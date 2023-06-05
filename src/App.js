@@ -1,4 +1,5 @@
 import "./App.css";
+import "./MediaQueries.css";
 import React, { useState } from "react";
 
 function App() {
@@ -55,7 +56,10 @@ function App() {
           </div>
 
           <div class="grid-item-3">
-            <img src={displayCatImage ? displayCatImage : ""} />
+            <img
+              src={displayCatImage ? displayCatImage : ""}
+              alt={displayCatImage ? "a random cat photo" : ""}
+            />
           </div>
 
           <div class="grid-item-4">
@@ -65,13 +69,13 @@ function App() {
           <div class="grid-item-5">
             <div>
               Images provided by{" "}
-              <a href="https://thecatapi.com/" target="_blank">
+              <a href="https://thecatapi.com/" target="_blank" rel="noreferrer">
                 The Cat API
               </a>
             </div>
             <div>
               Facts provided by{" "}
-              <a href="https://catfact.ninja/" target="_blank">
+              <a href="https://catfact.ninja/" target="_blank" rel="noreferrer">
                 Cat Fact Ninja
               </a>
             </div>

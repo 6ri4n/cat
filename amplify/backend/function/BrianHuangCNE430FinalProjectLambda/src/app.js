@@ -29,6 +29,7 @@ app.get("/catzen", async function (req, res) {
   let catImage = await getRandomCatImage();
   while (catImage.includes("gif")) catImage = await getRandomCatImage();
   const catFact = await getRandomCatFact();
+  while (catFact.length > 250) await getRandomCatFact();
 
   catImage && catFact
     ? res.status(200).json({ catImage, catFact })
