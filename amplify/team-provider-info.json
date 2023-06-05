@@ -20,6 +20,12 @@
       },
       "api": {
         "BrianHuangCNE430FinalProjectAPI": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d6zgg0js02l4g",
+          "type": "manual"
+        }
       }
     }
   }
