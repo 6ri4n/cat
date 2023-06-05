@@ -9,7 +9,7 @@ This guide will utilize AWS Amplify to do the following:
 
 **WARNING**: make sure you complete all of the [prerequisites](https://docs.amplify.aws/start/getting-started/installation/q/integration/react/) before continuing.
 
-#### Step 1
+### Step 1
 
 Create and navigate to the project directory.
 
@@ -19,7 +19,7 @@ Setup the react project within the project directory with the following command:
 npx create-react-app .
 ```
 
-#### Step 2
+### Step 2
 
 Installing AWS Amplify CLI to the project with the following command:
 
@@ -27,7 +27,7 @@ Installing AWS Amplify CLI to the project with the following command:
 npm install @aws-amplify/cli
 ```
 
-#### Step 3
+### Step 3
 
 Setting up the project on the cloud.
 
@@ -45,7 +45,7 @@ For the authentication method, select AWS profile and select your AWS account.
 amplify configure project
 ```
 
-#### Step 4
+### Step 4
 
 Setting up the API.
 
@@ -62,7 +62,7 @@ NodeJS for the runtime,
 and serverless express for the function template.
 No to the remaining fields.
 
-#### Step 5
+### Step 5
 
 Setting up the frontend.
 
@@ -76,7 +76,7 @@ Move the downloaded file into the src directory within your project directory.
 
 Follow the steps from App.css but with the [MediaQueries.css](./src/MediaQueries.css) file.
 
-#### Step 6
+### Step 6
 
 Setting up the backend.
 
@@ -86,7 +86,7 @@ Replace the content inside of the app.js file within your project directory with
 
 **NOTE**: Do not confuse this file with the App.js from the frontend, this app.js file is a separate file located here: ./amplify/backend/function/[name-of-your-lambda-function]/src/app.js
 
-#### Step 7
+### Step 7
 
 Deploying the backend on the cloud.
 
@@ -102,7 +102,7 @@ Once it's done, you can test the project locally if you wish with the following 
 npm start
 ```
 
-#### Step 8
+### Step 8
 
 Deploying and hosting the frontend on the cloud.
 
